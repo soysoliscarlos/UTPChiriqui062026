@@ -1,5 +1,5 @@
 resource "azurerm_key_vault" "rag" {
-  name                = "${random_string.prefix.result}-${var.key_vault_name}"
+  name                = "${var.key_vault_name}-${random_string.prefix.result}"
   location            = data.azurerm_resource_group.this.location
   resource_group_name = data.azurerm_resource_group.this.name
   tenant_id           = data.azurerm_client_config.current.tenant_id
