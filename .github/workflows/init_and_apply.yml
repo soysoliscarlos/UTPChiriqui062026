@@ -83,15 +83,12 @@ jobs:
       - name: Install Node
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ vars.NODEJS_VERSION || '24' }}
+          node-version: latest
           
       - name: Install Terraform
         uses: hashicorp/setup-terraform@v3
         with:
-          terraform_version: ${{ vars.TERRAFORM_VERSION || '1.7.3' }}
-
-      - name: Terraform Version confirmation
-        run: terraform -version
+          terraform_version: latest
 
       - name: Terraform Init
         run: terraform init
