@@ -6,12 +6,6 @@ variable "subscription_id" {
   type        = string
 }
 
-variable "user_object_id" {
-  description = "Azure Object ID for the user or group to assign roles."
-  type        = string
-  default     = ""
-}
-
 # #############################################
 # Variables - Configuración de despliegue y etiquetado
 # #############################################
